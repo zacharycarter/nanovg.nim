@@ -35,7 +35,7 @@ proc key*(window: glfw.Window; key: cint; scancode: cint; action: cint;
   # NVG_NOTUSED(scancode)
   # NVG_NOTUSED(mods)
   if key == KEY_ESCAPE and action == PRESS: 
-    SetWindowShouldClose(window, GL_TRUE)
+    SetWindowShouldClose(window, GL_TRUE.cint)
   if key == KEY_SPACE and action == PRESS: blowup = not blowup
   if key == KEY_S and action == PRESS: screenshot = 1
   if key == KEY_P and action == PRESS: premult = not premult
@@ -63,7 +63,7 @@ proc main*(): cint =
     # don't require this on win32, and works with more cards
     glfw.WindowHint(glfw.CONTEXT_VERSION_MAJOR, 3)
     glfw.WindowHint(glfw.CONTEXT_VERSION_MINOR, 2)
-    glfw.WindowHint(glfw.OPENGL_FORWARD_COMPAT, GL_TRUE)
+    glfw.WindowHint(glfw.OPENGL_FORWARD_COMPAT, GL_TRUE.cint)
     glfw.WindowHint(glfw.OPENGL_PROFILE, glfw.OPENGL_CORE_PROFILE)
   glfw.WindowHint(glfw.OPENGL_DEBUG_CONTEXT, 1)
   when defined(DEMO_MSAA): 
