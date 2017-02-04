@@ -1,7 +1,6 @@
 [Package]
-name          = "nanovg"
+name          = "nvg"
 version       = "0.1"
-author        = "fowl"
+author        = "zacharycarter"
 description   = """Wrapper for NanoVG vector graphics library"""
-license       = "MIT" 
-#srcDir        = "src"
+license       = "MIT"
